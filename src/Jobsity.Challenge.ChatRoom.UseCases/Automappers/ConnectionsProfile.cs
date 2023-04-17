@@ -13,7 +13,7 @@ namespace Jobsity.Challenge.ChatRoom.UseCases.Automappers
                                d => d.ConnectionId,
                                opt => opt.Ignore());
             CreateMap<User, UserDto>().ReverseMap();
-            CreateMap<ChatRoom_, ChatRoomDto>().ReverseMap();
+            CreateMap<ChatRoom.Domain.Entities.ChatRoom, ChatRoomDto>().ReverseMap();
             CreateMap<ChatMessageDto, ChatMessage>().ReverseMap();
         }
     }

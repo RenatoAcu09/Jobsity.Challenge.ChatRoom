@@ -13,6 +13,6 @@ namespace Jobsity.Challenge.ChatRoom.Domain.Entities
 
         public string Name { get; set; }
 
-        public IEnumerable<ChatRoom_> ChatRooms { get; set; }
+        public IEnumerable<ChatRoom> ChatRooms { get; set; }
     }
 }

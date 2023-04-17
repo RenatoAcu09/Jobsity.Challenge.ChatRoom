@@ -20,13 +20,13 @@ namespace Jobsity.Challenge.ChatRoom.Infra.Repositories
             _dataAppSettings = dataAppSettings ?? throw new ArgumentNullException(nameof(dataAppSettings));
         }
 
-        public async Task<ChatRoom_> AddUser(string roomName, User user)
+        public async Task<ChatRoom.Domain.Entities.ChatRoom> AddUser(string roomName, User user)
         {
             var room = await _chatContext.Rooms.Include(r => r.Users)
                                                .FirstOrDefaultAsync(r => r.Name == roomName);
             if (room is null)
             {
-                room = new ChatRoom_(roomName, user);
+                room = new ChatRoom.Domain.Entities.ChatRoom(roomName, user);
                 _chatContext.Rooms.Add(room);
             }
             else if (!room.Users.Any(x => x.Id == user.Id))
@@ -40,7 +40,7 @@ namespace Jobsity.Challenge.ChatRoom.Infra.Repositories
             return room;
         }
 
-        public async Task<IEnumerable<ChatRoom_>> GetAllRooms() =>
+        public async Task<IEnumerable<ChatRoom.Domain.Entities.ChatRoom>> GetAllRooms() =>
             await _chatContext.Rooms.Include(m => m.Messages.OrderBy(t => t.Timestamp))
                                     .ThenInclude(s => s.Sender)
                                     .AsNoTracking()
@@ -49,19 +49,19 @@ namespace Jobsity.Challenge.ChatRoom.Infra.Repositories
                                     .AsNoTracking()
                                     .ToListAsync();
 
-        public async Task<ChatRoom_> GetRoomById(Guid id) =>
+        public async Task<ChatRoom.Domain.Entities.ChatRoom> GetRoomById(Guid id) =>
             await _chatContext.Rooms.Where(r => r.Id == id)
                                     .Include(m => m.Messages)
                                     .Include(u => u.Users)
                                     .FirstOrDefaultAsync();
         
-        public async Task<ChatRoom_> GetRoomByName(string roomName) => 
+        public async Task<ChatRoom.Domain.Entities.ChatRoom> GetRoomByName(string roomName) => 
             await _chatContext.Rooms.Where(r => r.Name == roomName)
                                     .Include(u => u.Users)
                                     .AsNoTracking()
                                     .FirstOrDefaultAsync();
 
-        public async Task<ChatRoom_> GetRoomByNameAndUser(string groupName, Guid userId) =>
+        public async Task<ChatRoom.Domain.Entities.ChatRoom> GetRoomByNameAndUser(string groupName, Guid userId) =>
             await _chatContext.Rooms.Include(r => r.Users)
                                     .Where(r => r.Name == groupName && r.Users.Any(u => u.Id == userId))
                                     .AsNoTracking()

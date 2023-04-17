@@ -7,7 +7,7 @@ namespace Jobsity.Challenge.ChatRoom.Infra.Contexts
     {
         public DbSet<ChatMessage> ChatMessages { get; set; }
 
-        public DbSet<ChatRoom_> Rooms { get; set; }
+        public DbSet<ChatRoom.Domain.Entities.ChatRoom> Rooms { get; set; }
 
         public DbSet<User> Users { get; set; }
 

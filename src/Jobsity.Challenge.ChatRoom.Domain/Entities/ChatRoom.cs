@@ -2,13 +2,13 @@
 
 namespace Jobsity.Challenge.ChatRoom.Domain.Entities
 {
-    public class ChatRoom_
+    public class ChatRoom
     {
-        public ChatRoom_()
+        public ChatRoom()
         {
         }
 
-        public ChatRoom_(string name, User user)
+        public ChatRoom(string name, User user)
         {
             Id = Guid.NewGuid();
             Name = name;
