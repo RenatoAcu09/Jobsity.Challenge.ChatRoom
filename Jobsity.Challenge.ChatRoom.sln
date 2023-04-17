@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jobsity.Challenge.ChatRoom.UI.Web", "src\Jobsity.Challenge.ChatRoom.UI.Web\Jobsity.Challenge.ChatRoom.UI.Web.csproj", "{74C66080-B424-4440-AD53-AF941F55BFE1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jobsity.Challenge.ChatRoom.Bot", "src\Jobsity.Challenge.ChatRoom.Bot\Jobsity.Challenge.ChatRoom.Bot.csproj", "{E7046146-D8BC-4271-B608-C124E077C10F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{74C66080-B424-4440-AD53-AF941F55BFE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74C66080-B424-4440-AD53-AF941F55BFE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74C66080-B424-4440-AD53-AF941F55BFE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74C66080-B424-4440-AD53-AF941F55BFE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7046146-D8BC-4271-B608-C124E077C10F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7046146-D8BC-4271-B608-C124E077C10F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7046146-D8BC-4271-B608-C124E077C10F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7046146-D8BC-4271-B608-C124E077C10F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F3275FE6-9A4B-48FE-84B7-3FA33637ECE0}
+	EndGlobalSection
+EndGlobal
