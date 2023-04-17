@@ -1,0 +1,11 @@
+﻿{
+  "profiles": {
+    "Jobsity.Challenge.ChatRoom.Consumer": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      },
+      "dotnetRunMessages": true
+    }
+  }
+}

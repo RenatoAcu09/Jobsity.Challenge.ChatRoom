@@ -1,0 +1,88 @@
+version: "3.5"
+
+services:
+  nginx:
+    depends_on:
+      - signalr
+      - bot-api
+      - client
+    restart: always # because it is routing traffic to our entire app
+    build:
+      dockerfile: Dockerfile
+      context: ./nginx
+    ports:
+      - "80:80"
+
+  db:
+    image: mcr.microsoft.com/mssql/server:2019-CU15-ubuntu-20.04
+    environment:
+      ACCEPT_EULA: 'Y'
+      SA_PASSWORD: DockerSql2019!
+    volumes:
+      - ./dbdata:/var/opt/mssql/data
+    ports:
+      - "1433:1433"
+    restart: always
+
+  rabbitmq:
+    image: rabbitmq:3.9-management-alpine
+    ports:
+        - 0:5672
+        - 15672:15672
+    healthcheck:
+      test: [ "CMD", "nc", "-z", "localhost", "5672" ]
+      interval: 5s
+      timeout: 15s
+      retries: 1
+    volumes:
+        - rabbit:/var/lib/rabbitmq/
+        - rabbit:/var/log/rabbitmq
+
+  client:
+    depends_on:
+      - signalr
+      - bot-api
+    environment:
+      - ConnectionStrings__DefaultConnection=Data Source=db,1433;Initial Catalog=IdentityChatRoom;User Id=SA;Password=DockerSql2019!;
+      - SignalRUrl=http://localhost/
+    build:
+      context: ./src
+      dockerfile: ./Jobsity.Challenge.ChatRoom.UI.Web/Dockerfile
+    restart: always
+
+  signalr:
+    depends_on:
+      - bot-api
+    environment:
+      - ConnectionStrings__DefaultConnection=Data Source=db,1433;Initial Catalog=ChatRoom;User Id=SA;Password=DockerSql2019!;
+      - Apis__UrlBot=http://bot-api/bot-api/v1/
+    build:
+      context: ./src
+      dockerfile: ./Jobsity.Challenge.ChatRoom.SignalR/Dockerfile
+    restart: always
+
+  bot-api:
+    depends_on:
+      - rabbitmq
+    environment:
+      - AllowedCommands__0__MessageBroker__ConnectionString=amqp://guest:guest@rabbitmq:5672/
+    build:
+      context: ./src
+      dockerfile: ./Jobsity.Challenge.ChatRoom.Bot/Dockerfile
+    restart: always
+
+  consumer:
+    depends_on:
+      - rabbitmq
+      - client
+    environment:
+      - ChatApiUrl=http://signalr/chat
+      - MessageBroker__ConnectionString=amqp://guest:guest@rabbitmq:5672/
+    build:
+      context: ./src
+      dockerfile: ./Jobsity.Challenge.ChatRoom.Consumer/Dockerfile
+    restart: on-failure
+
+volumes:
+  dbdata:  
+  rabbit:

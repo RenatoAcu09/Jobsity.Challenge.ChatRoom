@@ -3,9 +3,38 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jobsity.Challenge.ChatRoom.UI.Web", "src\Jobsity.Challenge.ChatRoom.UI.Web\Jobsity.Challenge.ChatRoom.UI.Web.csproj", "{74C66080-B424-4440-AD53-AF941F55BFE1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jobsity.Challenge.ChatRoom.UI.Web", "src\Jobsity.Challenge.ChatRoom.UI.Web\Jobsity.Challenge.ChatRoom.UI.Web.csproj", "{74C66080-B424-4440-AD53-AF941F55BFE1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{08DF6BB5-C279-486D-B9E8-2299D785AAA9} = {08DF6BB5-C279-486D-B9E8-2299D785AAA9}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jobsity.Challenge.ChatRoom.Bot", "src\Jobsity.Challenge.ChatRoom.Bot\Jobsity.Challenge.ChatRoom.Bot.csproj", "{E7046146-D8BC-4271-B608-C124E077C10F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jobsity.Challenge.ChatRoom.Bot", "src\Jobsity.Challenge.ChatRoom.Bot\Jobsity.Challenge.ChatRoom.Bot.csproj", "{E7046146-D8BC-4271-B608-C124E077C10F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-Presenter", "1-Presenter", "{3554B065-464D-44E5-8B51-B4C5509F5325}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4-External interfaces", "4-External interfaces", "{6E8EB6EB-5E3D-4FCB-A283-387FFE39086A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jobsity.Challenge.ChatRoom.Infra", "src\Jobsity.Challenge.ChatRoom.Infra\Jobsity.Challenge.ChatRoom.Infra.csproj", "{08DF6BB5-C279-486D-B9E8-2299D785AAA9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jobsity.Challenge.ChatRoom.CrossCutting", "src\Jobsity.Challenge.ChatRoom.CrossCutting\Jobsity.Challenge.ChatRoom.CrossCutting.csproj", "{2EAE43F7-2C45-4F03-BB7E-33FAB5D67653}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0-Core", "0-Core", "{7BF7C355-6A22-405B-BF98-9507AB3712A3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2-Entities", "2-Entities", "{FA45401E-1F78-4BC5-ACEF-08FFE70AF4E1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jobsity.Challenge.ChatRoom.Core", "src\Jobsity.Challenge.ChatRoom.Core\Jobsity.Challenge.ChatRoom.Core.csproj", "{94ABDD17-B08A-4EB7-97DA-FB7E424A4D8C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jobsity.Challenge.ChatRoom.Domain", "src\Jobsity.Challenge.ChatRoom.Domain\Jobsity.Challenge.ChatRoom.Domain.csproj", "{E1F66104-77E2-4808-B395-C25321D0515C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jobsity.Challenge.ChatRoom.Interfaces", "src\Jobsity.Challenge.ChatRoom.Interfaces\Jobsity.Challenge.ChatRoom.Interfaces.csproj", "{95CB7D88-694B-4DB1-B320-9D4F69B152BA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3-UseCases", "3-UseCases", "{ACA2FADB-64A9-4E77-85C1-97711EFA549C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jobsity.Challenge.ChatRoom.UseCases", "src\Jobsity.Challenge.ChatRoom.UseCases\Jobsity.Challenge.ChatRoom.UseCases.csproj", "{AB6A35B3-2F2A-4B0D-A5B1-1B7A8CFF4184}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jobsity.Challenge.ChatRoom.SignalR", "src\Jobsity.Challenge.ChatRoom.SignalR\Jobsity.Challenge.ChatRoom.SignalR.csproj", "{6DC99523-C83B-41EA-8053-B96D6297C151}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jobsity.Challenge.ChatRoom.Consumer", "src\Jobsity.Challenge.ChatRoom.Consumer\Jobsity.Challenge.ChatRoom.Consumer.csproj", "{262B8DC2-644C-458E-A2E1-8CFB939B9431}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +50,53 @@ Global
 		{E7046146-D8BC-4271-B608-C124E077C10F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E7046146-D8BC-4271-B608-C124E077C10F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E7046146-D8BC-4271-B608-C124E077C10F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08DF6BB5-C279-486D-B9E8-2299D785AAA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08DF6BB5-C279-486D-B9E8-2299D785AAA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08DF6BB5-C279-486D-B9E8-2299D785AAA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08DF6BB5-C279-486D-B9E8-2299D785AAA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EAE43F7-2C45-4F03-BB7E-33FAB5D67653}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EAE43F7-2C45-4F03-BB7E-33FAB5D67653}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EAE43F7-2C45-4F03-BB7E-33FAB5D67653}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EAE43F7-2C45-4F03-BB7E-33FAB5D67653}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94ABDD17-B08A-4EB7-97DA-FB7E424A4D8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94ABDD17-B08A-4EB7-97DA-FB7E424A4D8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94ABDD17-B08A-4EB7-97DA-FB7E424A4D8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94ABDD17-B08A-4EB7-97DA-FB7E424A4D8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1F66104-77E2-4808-B395-C25321D0515C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1F66104-77E2-4808-B395-C25321D0515C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1F66104-77E2-4808-B395-C25321D0515C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1F66104-77E2-4808-B395-C25321D0515C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95CB7D88-694B-4DB1-B320-9D4F69B152BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95CB7D88-694B-4DB1-B320-9D4F69B152BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95CB7D88-694B-4DB1-B320-9D4F69B152BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95CB7D88-694B-4DB1-B320-9D4F69B152BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB6A35B3-2F2A-4B0D-A5B1-1B7A8CFF4184}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB6A35B3-2F2A-4B0D-A5B1-1B7A8CFF4184}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB6A35B3-2F2A-4B0D-A5B1-1B7A8CFF4184}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB6A35B3-2F2A-4B0D-A5B1-1B7A8CFF4184}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DC99523-C83B-41EA-8053-B96D6297C151}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DC99523-C83B-41EA-8053-B96D6297C151}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DC99523-C83B-41EA-8053-B96D6297C151}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DC99523-C83B-41EA-8053-B96D6297C151}.Release|Any CPU.Build.0 = Release|Any CPU
+		{262B8DC2-644C-458E-A2E1-8CFB939B9431}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{262B8DC2-644C-458E-A2E1-8CFB939B9431}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{262B8DC2-644C-458E-A2E1-8CFB939B9431}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{262B8DC2-644C-458E-A2E1-8CFB939B9431}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{74C66080-B424-4440-AD53-AF941F55BFE1} = {3554B065-464D-44E5-8B51-B4C5509F5325}
+		{E7046146-D8BC-4271-B608-C124E077C10F} = {3554B065-464D-44E5-8B51-B4C5509F5325}
+		{08DF6BB5-C279-486D-B9E8-2299D785AAA9} = {6E8EB6EB-5E3D-4FCB-A283-387FFE39086A}
+		{2EAE43F7-2C45-4F03-BB7E-33FAB5D67653} = {6E8EB6EB-5E3D-4FCB-A283-387FFE39086A}
+		{94ABDD17-B08A-4EB7-97DA-FB7E424A4D8C} = {7BF7C355-6A22-405B-BF98-9507AB3712A3}
+		{E1F66104-77E2-4808-B395-C25321D0515C} = {FA45401E-1F78-4BC5-ACEF-08FFE70AF4E1}
+		{95CB7D88-694B-4DB1-B320-9D4F69B152BA} = {FA45401E-1F78-4BC5-ACEF-08FFE70AF4E1}
+		{AB6A35B3-2F2A-4B0D-A5B1-1B7A8CFF4184} = {ACA2FADB-64A9-4E77-85C1-97711EFA549C}
+		{6DC99523-C83B-41EA-8053-B96D6297C151} = {3554B065-464D-44E5-8B51-B4C5509F5325}
+		{262B8DC2-644C-458E-A2E1-8CFB939B9431} = {3554B065-464D-44E5-8B51-B4C5509F5325}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F3275FE6-9A4B-48FE-84B7-3FA33637ECE0}
