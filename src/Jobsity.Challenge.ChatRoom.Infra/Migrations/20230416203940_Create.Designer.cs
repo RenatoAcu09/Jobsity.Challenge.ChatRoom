@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Jobsity.Challenge.ChatRoom.Infra.Migrations
 {
     [DbContext(typeof(ChatContext))]
-    [Migration("20220212235658_Create")]
+    [Migration("20230416203930_Create")]
     partial class Create
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

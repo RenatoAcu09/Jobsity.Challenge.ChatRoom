@@ -34,7 +34,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jobsity.Challenge.ChatRoom.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jobsity.Challenge.ChatRoom.SignalR", "src\Jobsity.Challenge.ChatRoom.SignalR\Jobsity.Challenge.ChatRoom.SignalR.csproj", "{6DC99523-C83B-41EA-8053-B96D6297C151}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jobsity.Challenge.ChatRoom.Consumer", "src\Jobsity.Challenge.ChatRoom.Consumer\Jobsity.Challenge.ChatRoom.Consumer.csproj", "{262B8DC2-644C-458E-A2E1-8CFB939B9431}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jobsity.Challenge.ChatRoom.Consumer", "src\Jobsity.Challenge.ChatRoom.Consumer\Jobsity.Challenge.ChatRoom.Consumer.csproj", "{262B8DC2-644C-458E-A2E1-8CFB939B9431}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5-Tests", "5-Tests", "{02C3FB07-C8AB-4D58-8B3B-3568A8206D5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jobsity.Challenge.ChatRoom.UnitTests", "src\Jobsity.Challenge.ChatRoom.UnitTests\Jobsity.Challenge.ChatRoom.UnitTests.csproj", "{CFE91A18-DAE2-4504-8A9C-54F8F55E4F90}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -82,6 +86,10 @@ Global
 		{262B8DC2-644C-458E-A2E1-8CFB939B9431}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{262B8DC2-644C-458E-A2E1-8CFB939B9431}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{262B8DC2-644C-458E-A2E1-8CFB939B9431}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFE91A18-DAE2-4504-8A9C-54F8F55E4F90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFE91A18-DAE2-4504-8A9C-54F8F55E4F90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFE91A18-DAE2-4504-8A9C-54F8F55E4F90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFE91A18-DAE2-4504-8A9C-54F8F55E4F90}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -97,6 +105,7 @@ Global
 		{AB6A35B3-2F2A-4B0D-A5B1-1B7A8CFF4184} = {ACA2FADB-64A9-4E77-85C1-97711EFA549C}
 		{6DC99523-C83B-41EA-8053-B96D6297C151} = {3554B065-464D-44E5-8B51-B4C5509F5325}
 		{262B8DC2-644C-458E-A2E1-8CFB939B9431} = {3554B065-464D-44E5-8B51-B4C5509F5325}
+		{CFE91A18-DAE2-4504-8A9C-54F8F55E4F90} = {02C3FB07-C8AB-4D58-8B3B-3568A8206D5E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F3275FE6-9A4B-48FE-84B7-3FA33637ECE0}

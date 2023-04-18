@@ -134,7 +134,7 @@ namespace Jobsity.Challenge.ChatRoom.SignalR.Hubs
         private async Task HandleCommand(ChatMessageDto chatMessage)
         {
             var message = string.Empty;
-            if (_dataAppSettings.AllowedCommands.Any(c => chatMessage.Message.StartsWith(c)))
+            if (_dataAppSettings.AllowedCommands.Any(c => chatMessage.Message.ToLower().StartsWith(c)))
             {
                 await _dispatchCommandUseCase.DispatchAsync(chatMessage);
                 message = $"Processing command {chatMessage.Message}";
