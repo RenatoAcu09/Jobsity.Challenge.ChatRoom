@@ -17,7 +17,7 @@ namespace Jobsity.Challenge.ChatRoom.Bot.UseCases.Services
         {
             foreach (var allowedCommand in _dataAppSettings.AllowedCommands)
             {
-                var regex = new Regex($"(?<={allowedCommand.Command}).*").Matches(command);
+                var regex = new Regex($"(?<={allowedCommand.Command}).*").Matches(command.ToLower());
                 if (regex.Count > 0)
                 {
                     return (allowedCommand, regex.First().Value);

@@ -101,14 +101,17 @@ namespace Jobsity.Challenge.ChatRoom.SignalR.Hubs
         {
             try
             {
-                if (chatMessage.IsCommand())
+                if (chatMessage.Message.ToString().Trim() != "")
                 {
-                    await HandleCommand(chatMessage);
-                }
-                else
-                {
-                    await _saveMessageIntoRoomUseCase.SaveAsync(chatMessage);
-                    await Clients.Group(chatMessage.Destination.ToString()).SendAsync(ConstantsHubs.Receive, chatMessage);
+                    if (chatMessage.IsCommand())
+                    {
+                        await HandleCommand(chatMessage);
+                    }
+                    else
+                    {
+                        await _saveMessageIntoRoomUseCase.SaveAsync(chatMessage);
+                        await Clients.Group(chatMessage.Destination.ToString()).SendAsync(ConstantsHubs.Receive, chatMessage);
+                    }
                 }
             }
             catch (Exception ex)
