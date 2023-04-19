@@ -38,7 +38,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jobsity.Challenge.ChatRoom.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5-Tests", "5-Tests", "{02C3FB07-C8AB-4D58-8B3B-3568A8206D5E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jobsity.Challenge.ChatRoom.UnitTests", "src\Jobsity.Challenge.ChatRoom.UnitTests\Jobsity.Challenge.ChatRoom.UnitTests.csproj", "{CFE91A18-DAE2-4504-8A9C-54F8F55E4F90}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jobsity.Challenge.ChatRoom.UnitTests", "src\Jobsity.Challenge.ChatRoom.UnitTests\Jobsity.Challenge.ChatRoom.UnitTests.csproj", "{CFE91A18-DAE2-4504-8A9C-54F8F55E4F90}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,4 +1,3 @@
-using Jobsity.Challenge.ChatRoom.Core.Utils;
 using Jobsity.Challenge.ChatRoom.Bot.Infra.Configurations;
 using Jobsity.Challenge.ChatRoom.Bot.Infra.Gateways;
 using Jobsity.Challenge.ChatRoom.Bot.Infra.MessageBroker;
