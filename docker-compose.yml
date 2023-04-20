@@ -11,7 +11,7 @@ services:
       dockerfile: Dockerfile
       context: ./nginx
     ports:
-      - "80:80"
+      - "8080:80"
 
   db:
     image: mcr.microsoft.com/mssql/server:2019-CU15-ubuntu-20.04
@@ -44,7 +44,7 @@ services:
       - bot-api
     environment:
       - ConnectionStrings__DefaultConnection=Data Source=db,1433;Initial Catalog=IdentityChatRoom;User Id=SA;Password=DockerSql2019!;
-      - SignalRUrl=http://localhost/
+      - SignalRUrl=http://localhost:8080/
     build:
       context: ./src
       dockerfile: ./Jobsity.Challenge.ChatRoom.UI.Web/Dockerfile
