@@ -24,7 +24,7 @@ You must have *docker* installed on your operating system (Linux, Windows or Mac
 ### Run the command:
 - ` docker-compose up --build` 
 
-### After that , access http://localhost into a web-browser and start to using the Chat.
+### After that , access http://localhost:8080 into a web-browser and start to using the Chat.
 
 
 ## To debug the application
