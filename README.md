@@ -31,7 +31,7 @@ You must have *docker* installed on your operating system (Linux, Windows or Mac
 
 1. Run the following commands to start RabbitMQ and MySQL:  
     - `docker run -d -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3.9-management`  
-    - `docker run --name sqlserver -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=DockerSql2019!" -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-CU15-ubuntu-20.04`
+    - `docker run --name sqlserver -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=DockerSql2019!" -p 5433:1433 -d mcr.microsoft.com/mssql/server:2019-CU15-ubuntu-20.04`
 1. Open the solution with Visual Studio  
 2. Right-click into the Solution -> `Properties`  
 3. Check `Multiple startup projects` then set as bellow:  
