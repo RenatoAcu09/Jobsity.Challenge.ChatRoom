@@ -21,7 +21,7 @@ services:
     volumes:
       - ./dbdata:/var/opt/mssql/data
     ports:
-      - "1433:1433"
+      - "5433:1433"
     restart: always
 
   rabbitmq:
